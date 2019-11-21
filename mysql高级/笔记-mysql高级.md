@@ -68,11 +68,11 @@ mysql> explain select tc.tcdesc from teacherCard tc where tc.tcid =
 **explain需要注意的地方**
 1. id值不同，id值越大越优先查询；id值相同，从上往下顺序执行。
 2. select_type
-	2.1 PRIMARY：包含子查询中的主查询（最外层）
-	2.2 SUBQUERY：包含子查询中的子查询（非最外层）
-	2.3 SIMPLE：简单查询
-	2.4 derived：衍生查询（使用到了临时表）
-       		2.4.1  sdf
+2.1 PRIMARY：包含子查询中的主查询（最外层）
+2.2 SUBQUERY：包含子查询中的子查询（非最外层）
+2.3 SIMPLE：简单查询
+2.4 derived：衍生查询（使用到了临时表）
+2.4.1  sdf
 
 
 
