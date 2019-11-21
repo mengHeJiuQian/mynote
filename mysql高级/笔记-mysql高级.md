@@ -37,7 +37,7 @@ create index index_age_name on student(age,name);
 
 -- 删除索引
 drop index 索引名 on 表名;
-
+show index from user;
 ```
 
 **注意**
