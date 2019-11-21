@@ -22,7 +22,7 @@
 **索引操作示例**
 ```sql
 -- 创建索引方式一
--- create 索引类型 索引名称 on 表名(字段名);
+create 索引类型 索引名称 on 表名(字段名);
 
 --单值索引
 create index index_age on student(age);
@@ -31,12 +31,14 @@ create unique index_student_id on student(id);
 --复合索引
 create index index_age_name on student(age,name);
 
-
 -- 创建索引方式二
--- alter table 表名 add 索引类型 索引名称(索引字段);
+alter table 表名 add 索引类型 索引名称(索引字段);
 
 -- 删除索引
 drop index 索引名 on 表名;
+
+-- 查看一张表的所有索引
+show index from user;
 show index from user;
 ```
 
