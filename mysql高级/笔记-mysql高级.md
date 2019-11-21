@@ -66,7 +66,8 @@ mysql> explain select tc.tcdesc from teacherCard tc where tc.tcid =
 ```
 
 **explain需要注意的地方**
-1. id值不同，id值越大越优先查询；id值相同，从上往下顺序执行
+1. id值不同，id值越大越优先查询；id值相同，从上往下顺序执行。
+2. select_type
 
 
 
