@@ -32,7 +32,7 @@ create index index_age_name on student(age,name);
 
 
 -- 创建索引方式二
--- alter table 表名 add 索引类型 索引
+-- alter table 表名 add 索引类型 索引名称(索引字段);
 ```
 
 1. 1. 1. 1. 1. 
