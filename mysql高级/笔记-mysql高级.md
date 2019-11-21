@@ -45,7 +45,12 @@ show index from user;
 **注意**
 > 如果一个字段被primary key修饰，则该字段默认就是主键索引。
 
-# 
+# 查询优化
+
+## explain
+
+
+
 
 
 1. 1. 1. 1. 1. 
