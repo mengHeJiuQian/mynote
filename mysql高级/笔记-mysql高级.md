@@ -74,3 +74,4 @@ mysql> explain select tc.tcdesc from teacherCard tc where tc.tcid =
 2.4 derived：衍生查询（使用到了临时表）
 
 
+
