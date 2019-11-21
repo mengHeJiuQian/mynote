@@ -72,6 +72,8 @@ mysql> explain select tc.tcdesc from teacherCard tc where tc.tcid =
 2.2 SUBQUERY：包含子查询中的子查询（非最外层）
 2.3 SIMPLE：简单查询
 2.4 derived：衍生查询（使用到了临时表）
+a) 在from子查询中只有一张表
+b) 在from
 
 
 
