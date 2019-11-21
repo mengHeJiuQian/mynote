@@ -34,6 +34,10 @@ create index index_age_name on student(age,name);
 
 -- 创建索引方式二
 -- alter table 表名 add 索引类型 索引名称(索引字段);
+
+-- 删除索引
+drop index 索引名 on 表名;
+
 ```
 
 **注意**
