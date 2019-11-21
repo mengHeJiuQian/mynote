@@ -38,7 +38,7 @@ alter table 表名 add 索引类型 索引名称(索引字段);
 drop index 索引名 on 表名;
 
 -- 查看一张表的所有索引
-show index from user;
+show index from 表名;
 show index from user;
 ```
 
