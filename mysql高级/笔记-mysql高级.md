@@ -49,8 +49,8 @@ show index from user;
 
 ## explain
 
-**样例**
-```
+**执行样例**
+```sql
 mysql> explain select tc.tcdesc from teacherCard tc where tc.tcid = 
     -> ( select t.tcid from teacher t where t.tid=(
     ->      select c.tid from course c where c.cname = 'sql'
@@ -63,8 +63,9 @@ mysql> explain select tc.tcdesc from teacherCard tc where tc.tcid =
 |  2 | SUBQUERY    | t     | NULL       | const | PRIMARY       | PRIMARY | 4       | const |    1 |   100.00 | NULL        |
 |  3 | SUBQUERY    | c     | NULL       | ALL   | NULL          | NULL    | NULL    | NULL  |    4 |    25.00 | Using where |
 +----+-------------+-------+------------+-------+---------------+---------+---------+-------+------+----------+-------------+
-
 ```
+
+**explain需要注意的**
 
 
 
