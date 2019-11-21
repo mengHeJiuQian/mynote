@@ -70,6 +70,8 @@ mysql> explain select tc.tcdesc from teacherCard tc where tc.tcid =
 2. select_type
 	2.1 PRIMARY：包含子查询中的主查询（最外层）
 	2.2 SUBQUERY：包含子查询中的子查询（非最外层）
+	2.3 SIMPLE：简单查询
+	2.4 SIMPLE：简单查询
 
 
 
