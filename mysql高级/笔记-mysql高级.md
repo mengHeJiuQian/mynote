@@ -37,7 +37,7 @@ create index index_age_name on student(age,name);
 ```
 
 **注意**
-> 如果一个字段
+> 如果一个字段被primary key修饰，则该字段默认就是主键索引。
 
 
 
