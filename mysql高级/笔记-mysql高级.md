@@ -26,7 +26,9 @@ create 索引类型 索引名称 on 表名(字段名);
 --单值索引
 create index index_age on student(age);
 --唯一索引
+create unique index_student_id on student(id);
 --复合索引
+create index index_age_name on student(age,name);
 ```
 
 1. 1. 1. 1. 1. 
