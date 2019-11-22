@@ -104,7 +104,7 @@ b) 在from子查询中，如果有```table1 union table2```，则table1是derive
 3. 复合索引不能使用“不等于”和 is null的判断，会导致索引失效
 
 **注意**
-> sql
+> sql结构的优化是概率层面的，因为MySQL会对sql语句进行优化器处理，
 	
 
 
