@@ -82,6 +82,7 @@ b) 在from子查询中，如果有```table1 union table2```，则table1是derive
 	3.5 range，检索指定范围的行。
 	3.6 index，查询全部索引的数据。
 	3.7 all，查询表全部的数据。
+4. 
 
 
 
