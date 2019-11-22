@@ -127,9 +127,10 @@ show variables like '%slow_query_log%';
 set global show_query_log = 1;
 
 -- 永久开启
+-- 编辑MySQL配置文件/etc/my.cnf，增加如下配置：
 [mysqld]
 slow_query_log=1
-slow_query_log_file=/var/lib/mysql/localhost_show_query_log
+slow_query_log_file=/var/lib/mysql/localhost_show_query_log.log
 ```
 	
 
