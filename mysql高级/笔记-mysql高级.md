@@ -123,7 +123,7 @@ b) 在from子查询中，如果有```table1 union table2```，则table1是derive
 -- 查看慢查询是否开启
 show variables like '%slow_query_log%';
 
--- 临时打开慢查询
+-- 临时打开慢查询，重启后失效
 set global show_query_log = 1;
 ```
 	
