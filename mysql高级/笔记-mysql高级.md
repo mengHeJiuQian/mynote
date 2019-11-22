@@ -90,8 +90,8 @@ b) 在from子查询中，如果有```table1 union table2```，则table1是derive
 9. extra：
 	9.1：using filesort，性能消耗大，需要一次额外的排序（查询）。
    		1）对于单索引来说，如果索引字段和排序字段不一样，则会出现using filesort。
-		2）对于复合索引，如果跨列，则会出现using filesort（避免跨列和无序使用）。
-	9.2：
+		2）对于复合索引，如果跨列，则会出现using filesort（where和order by使用时避免跨列和无序使用）。
+	9.2：using 
 
 
 
