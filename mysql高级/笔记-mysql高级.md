@@ -139,6 +139,6 @@ show variables like '%long_query_time%';
 show variables like '%slow_queries%';
 ```
 	
-
+# mysqldumpslow工具查看慢sql
 
 
