@@ -76,7 +76,7 @@ a) 在from子查询中只有一张表
 b) 在from子查询中，如果有```table1 union table2```，则table1是derived，table2就是union。
 3. type 查询类型
 	3.1 system（忽略），只有一条数据的系统表，或者衍生表只有一条数据的主查询。
- 	3.2 const
+ 	3.2 const，仅仅能查询到一条数据的查询且只能用于primary key或union索引。
 
 
 
