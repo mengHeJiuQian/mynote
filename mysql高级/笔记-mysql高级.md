@@ -134,6 +134,9 @@ slow_query_log_file=/var/lib/mysql/localhost_show_query_log.log
 
 -- 查看慢查询阈值。
 show variables like '%long_query_time%';
+
+-- 查看慢查询的记录条数
+show variables like '%slow_queries%';
 ```
 	
 
