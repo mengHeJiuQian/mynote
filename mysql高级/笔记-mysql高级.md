@@ -85,7 +85,8 @@ b) 在from子查询中，如果有```table1 union table2```，则table1是derive
 4. possible_keys：可能用到的索引
 5. key：实际使用到的索引
 6. key_len：索引的长度，可用于判断复合索引是否被完全使用。
-7. ref：表示查询表时参照的字段，如果是
+7. ref：表示查询表时参照的字段，如果是参照常量，则为const。
+8. row：被索引优化查询的数据个数。
 
 
 
