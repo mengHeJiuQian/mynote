@@ -97,6 +97,7 @@ b) 在from子查询中，如果有```table1 union table2```，则table1是derive
 	9.5：impossible where：where子句逻辑永远为false。
 ## 链接查询
 1. 小表驱动大表，表数据量小的放左边。
+2. 
 
 
 
