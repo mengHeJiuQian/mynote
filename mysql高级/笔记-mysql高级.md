@@ -84,6 +84,7 @@ b) 在from子查询中，如果有```table1 union table2```，则table1是derive
 	3.7 all，查询表全部的数据。
 4. possible_keys：可能用到的索引
 5. key：实际使用到的索引
+6. key_len：索引的长度，可用于判断复合索引是否被
 
 
 
