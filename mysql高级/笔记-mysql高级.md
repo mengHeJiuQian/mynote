@@ -119,7 +119,10 @@ b) 在from子查询中，如果有```table1 union table2```，则table1是derive
 > sql结构的优化是概率层面的，因为MySQL会对sql语句进行优化器处理，所以需要通过explain语句推测优化后结果。
 
 # 慢查询日志
+```sql
+show variables like '%slow_query_log%';
 
+```
 	
 
 
