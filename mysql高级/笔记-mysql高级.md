@@ -74,6 +74,8 @@ mysql> explain select tc.tcdesc from teacherCard tc where tc.tcid =
 2.4 derived：衍生查询（使用到了临时表）
 a) 在from子查询中只有一张表
 b) 在from子查询中，如果有```table1 union table2```，则table1是derived，table2就是union。
+3. type 查询类型
+4. 
 
 
 
