@@ -131,6 +131,9 @@ set global show_query_log = 1;
 [mysqld]
 slow_query_log=1
 slow_query_log_file=/var/lib/mysql/localhost_show_query_log.log
+
+-- 查看慢查询阈值。
+show variables like '%long_query_time%';
 ```
 	
 
