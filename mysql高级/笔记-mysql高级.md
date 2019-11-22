@@ -92,7 +92,7 @@ b) 在from子查询中，如果有```table1 union table2```，则table1是derive
    		1）对于单索引来说，如果索引字段和排序字段不一样，则会出现using filesort。
 		2）对于复合索引，如果跨列，则会出现using filesort（where和order by使用时避免跨列和无序使用）。
 	9.2：using temporary，用到了临时表，一般出现在group by中。
-	9.3：using index。
+	9.3：using index，覆盖索引，只从索引文件中获取数据，不需要回表。
 
 
 
