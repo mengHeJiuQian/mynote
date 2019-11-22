@@ -97,7 +97,7 @@ b) 在from子查询中，如果有```table1 union table2```，则table1是derive
 	9.5：impossible where：where子句逻辑永远为false。
 
 **知识补充**
-1. order by 
+1. order by 中的 using filesort排序方式有两种，单路排序和双路排序。
 
 ## 链接查询
 1. 小表驱动大表，表数据量小的放左边。
