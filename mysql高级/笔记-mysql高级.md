@@ -125,6 +125,11 @@ show variables like '%slow_query_log%';
 
 -- 临时打开慢查询，重启后失效
 set global show_query_log = 1;
+
+-- 永久开启
+[mysqld]
+slow_query_log=1
+slow_query_log_file=/var/lib/mysql/localhost_show_query_log
 ```
 	
 
