@@ -120,8 +120,11 @@ b) 在from子查询中，如果有```table1 union table2```，则table1是derive
 
 # 慢查询日志
 ```sql
+-- 查看慢查询是否开启
 show variables like '%slow_query_log%';
 
+-- 临时打开慢查询
+set global show_query_log = 1;
 ```
 	
 
