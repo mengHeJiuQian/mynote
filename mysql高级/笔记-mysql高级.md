@@ -77,6 +77,7 @@ b) 在from子查询中，如果有```table1 union table2```，则table1是derive
 3. type 查询类型
 	3.1 system（忽略），只有一条数据的系统表，或者衍生表只有一条数据的主查询。
  	3.2 const，仅仅能查询到一条数据的查询且只能用于primary key或union索引。
+	3.3 eq_ref，唯一性索引，对于每一个索引列的查询，
 
 
 
