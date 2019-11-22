@@ -95,6 +95,9 @@ b) 在from子查询中，如果有```table1 union table2```，则table1是derive
 	9.3：using index，覆盖索引，只从索引文件中获取数据，不需要回表。
 	9.4：using where，需要回表查询。
 	9.5：impossible where：where子句逻辑永远为false。
+
+****
+
 ## 链接查询
 1. 小表驱动大表，表数据量小的放左边。
 
@@ -111,7 +114,7 @@ b) 在from子查询中，如果有```table1 union table2```，则table1是derive
 
 **注意**
 > sql结构的优化是概率层面的，因为MySQL会对sql语句进行优化器处理，所以需要通过explain语句推测优化后结果。
- 发送到
+
 	
 
 
