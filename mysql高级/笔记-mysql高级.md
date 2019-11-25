@@ -169,6 +169,8 @@ show status like 'table%';
 unlock tables;
 -- 查看表的索引
 show index from 表名
+-- 查看行锁的情况
+show status like '%innodb_row%';
 ```
 
 **小知识**
