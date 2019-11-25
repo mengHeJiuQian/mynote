@@ -182,7 +182,7 @@ show status like '%innodb_row%';
 1. master将改变的数据记录到本地的二进制文件中（binary log），该过程称之为二进制日志事件。
 2. slave的IO线程将master的bin-log拷贝到自己的relay log中（中继日志文件）。
 3. slave的SQL线程将中继日志文件保存的从数据库。
-4. 
+4. 主从复制是有延时的，可能会导致数据丢失。
 ![mysql主从复制原理图.png](0)
 
 
