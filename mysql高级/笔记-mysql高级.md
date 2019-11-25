@@ -144,8 +144,8 @@ show variables like '%slow_queries%';
 # 锁机制
 ## 锁分类
 **按操作类型分**
-1.
-we	
-	w	
+1. 读锁（也称共享锁）
+2. 写锁（）
+
 
 
