@@ -178,6 +178,7 @@ show status like '%innodb_row%';
 
 >  对于Innodb，如果更改操作没有使用索引，则会使用表锁。
 
-
+# 
+![mysql主从复制原理图.png](0)
 
 
