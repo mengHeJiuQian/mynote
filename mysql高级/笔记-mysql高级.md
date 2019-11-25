@@ -152,6 +152,13 @@ show variables like '%slow_queries%';
 2. 行锁：一次性对一条记录加锁。开销大，加锁慢，可能会出现死锁。
 3. 页锁
 
+```
+-- 增加锁
+lock table 表名1 read/write, 表名1 read/write;
+-- 查看加锁的表
+show open tables;
+```
+
 
 
 
