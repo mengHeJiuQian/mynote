@@ -141,6 +141,7 @@ show variables like '%slow_queries%';
 	
 # mysqldumpslow工具查看慢sql
 
-
+# 锁机制
+## 锁分类
 
 
