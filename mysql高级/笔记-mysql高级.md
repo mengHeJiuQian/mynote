@@ -165,6 +165,8 @@ show open tables;
 show status like 'table%';
 -- 释放锁
 unlock tables;
+-- 查看表的索引
+show index from 表名
 ```
 
 **小知识**
