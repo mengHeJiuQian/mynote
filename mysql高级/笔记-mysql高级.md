@@ -178,7 +178,8 @@ show status like '%innodb_row%';
 
 >  对于Innodb，如果更改操作没有使用索引，则会使用表锁。
 
-# 
+# 主从复制
+1. master将改变的数据记录到本地的二进制文件中（）
 ![mysql主从复制原理图.png](0)
 
 
