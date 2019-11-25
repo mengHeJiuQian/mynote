@@ -159,6 +159,7 @@ show variables like '%slow_queries%';
 lock table 表名1 read/write, 表名1 read/write;
 -- 查看加锁的表
 show open tables;
+-- 分析表
 -- 释放锁
 unlock tables;
 ```
