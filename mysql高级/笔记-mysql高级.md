@@ -183,5 +183,3 @@ show status like '%innodb_row%';
 2. slave的IO线程将master的bin-log拷贝到自己的relay log中（中继日志文件）。
 3. slave的SQL线程将中继日志文件保存的从数据库。
 4. 主从复制是有延时的，可能会导致数据丢失。
-
-
