@@ -13,7 +13,6 @@ docker pull mysql
 docker images
 
 # 创建MySQL容器
-docker run -p 33306:3306 \
--e MYSQL_ROOT_PASSWORD=1317598LY3201abc
+docker run -p 33306:3306 -e MYSQL_ROOT_PASSWORD=1317598LY3201abc
 
 ```
