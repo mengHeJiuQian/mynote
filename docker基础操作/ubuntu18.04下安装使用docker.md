@@ -23,5 +23,5 @@ mysql> flush privileges;
 
 # 停止一个正在运行的docker容器
 docker stop CONTAINER_ID
-# 给
+# 给docker容器重新
 ```
