@@ -10,6 +10,6 @@ docker pull mysql
 # 列出本地所有镜像
 docker images
 # 创建MySQL容器
-docker run -p 3306
+docker run -p 33306:3306
 
 ```
