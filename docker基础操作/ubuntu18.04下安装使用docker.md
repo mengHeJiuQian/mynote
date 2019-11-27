@@ -16,6 +16,6 @@ docker images
 docker run -p 33306:3306 -e MYSQL_ROOT_PASSWORD=1317598LY3201abc mysql
 
 # 进入MySQL容器,登陆MySQL
-docker exec -it pinyougou_mysql /bin/bash
+docker exec -it 容器id(CONTAINER ID) /bin/bash
 
 ```
