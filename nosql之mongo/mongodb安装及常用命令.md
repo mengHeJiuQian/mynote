@@ -29,12 +29,7 @@ show dbs
 
 use test
 
-db.createUser(  
-  {  
-    user: "admin",  
-    pwd: "admin",  
-    roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]  
-  }  
-)
+# 在test创建一个用户
+db.createUser({user:"sheldon",pwd:"sheldon",roles:[{role:"dbAdmin",db:"test"}]})
 
 ```
