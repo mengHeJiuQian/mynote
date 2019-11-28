@@ -9,9 +9,11 @@ $ docker pull mongo:4.0-xenial
 $ docker images
 
 # 启动一个运行mongodb的容器
-使用 -p 将容器的27017端口映射到宿主机的27017端口；
-使用 -v 将宿主机当前路径的db文件夹挂载至容器中，将数据持久化到宿主机。#
-$ docker run -p 27017:27017 -v -d 镜像tag
+$ docker run -p 27017:27017  \
+--name mongodb_4.0 \
+-v $PWD/db:/data/db  -d 镜像tag
+# 使用 -p 将容器的27017端口映射到宿主机的27017端口；
+# 使用 -v 将宿主机当前路径的db文件夹挂载至容器中，将数据持久化到宿主机。
 
 
 ```
