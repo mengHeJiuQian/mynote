@@ -22,3 +22,9 @@ $ docker run -p 27017:27017  \
 $ docker exec -it 容器ID /bin/bash
 
 ```
+
+# mongo常用命令
+```txt
+show dbs
+
+```
