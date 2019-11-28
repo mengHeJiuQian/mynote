@@ -27,4 +27,14 @@ $ docker exec -it 容器ID /bin/bash
 ```txt
 show dbs
 
+use test
+
+db.createUser(  
+  {  
+    user: "admin",  
+    pwd: "admin",  
+    roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]  
+  }  
+)
+
 ```
