@@ -16,5 +16,5 @@ tar -zxvf redis-5.0.3.tar.gz
 cd redis-5.0.3
 make 
 make test 
-make install PREFIX=/usr/local/redis
+make install PREFIX=/usr/local/app/redis-bin
 ```
