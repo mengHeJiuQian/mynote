@@ -53,6 +53,16 @@ java -version
 会打印出Java的一些信息
 
 （6）安装Perl
+安装gcc之类的工具，编译安装Perl的过程会使用gcc
+yum install -y gcc
+
+wget https://www.cpan.org/src/5.0/perl-5.28.1.tar.gz
+tar -xzf perl-5.28.1.tar.gz
+cd perl-5.28.1
+./Configure -des -Dprefix=$HOME/localperl
+make
+make test
+make install
 
 
 
