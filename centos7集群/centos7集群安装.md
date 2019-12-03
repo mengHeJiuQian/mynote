@@ -93,7 +93,12 @@ ssh-keygen -t rsa
 cat id_rsa.pub  > authorized_keys
 
 在另外三台的机器节点上也生成各自的authorized_keys，并使用ssh-copy-id -i hostname命令将各自机器里生成的公钥拷贝到指定第一台机器的authorized_keys文件中
-ssh-copy-id -i
+eshop-cache02里执行ssh-copy-id -i eshop-cache01
+eshop-cache03里执行ssh-copy-id -i eshop-cache01
+eshop-cache04里执行ssh-copy-id -i eshop-cache01
+
+此时eshop-cache01主机的authorized_keys就有了
+
 
 
 
