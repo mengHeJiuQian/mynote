@@ -6,7 +6,9 @@
 最小化安装centos7虚拟机后是不能上网的
 编辑网卡文件
 vi /etc/sysconfig/network-scripts/ifcfg-ens0s3
-修改onboot属性为onboot=yes
+修改onboot修改属性为
+onboot=yes
+BOOTPROTO=dhcp
 保存文件后,重启 网卡 service network restart
 
 再次编辑/etc/sysconfig/network-scripts/ifcfg-ens0s3
@@ -14,9 +16,11 @@ vi /etc/sysconfig/network-scripts/ifcfg-ens0s3
 BOOTPROTO=static
 IPADDR=192.168.16.X
 NETMASK=255.255.255.0
-GATEWAY=192.168.0.1
+GATEWAY=192.168.16.1
+DNS1=114.114.114.114
+DNS2=8.8.8.8
 
-service network restart
+保存后重启网络 service network restart
 
 
 ```
