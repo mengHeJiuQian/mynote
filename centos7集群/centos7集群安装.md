@@ -59,7 +59,7 @@ yum install -y gcc
 wget https://www.cpan.org/src/5.0/perl-5.28.1.tar.gz
 tar -xzf perl-5.28.1.tar.gz
 cd perl-5.28.1
-./Configure -des -Dprefix=$HOME/localperl
+./Configure -des -Dprefix=/usr/local/perl
 make
 make test
 make install
