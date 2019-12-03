@@ -48,5 +48,6 @@ chkconfig redis_6379 on
 
 # 关闭redis服务
 ```
+关闭redis服务
 redis-cli shutdown
 ```
