@@ -22,5 +22,11 @@ DNS2=8.8.8.8
 
 保存后重启网络 service network restart
 
+方便每台虚拟机相互通信，关闭防火墙
+
+service iptables stop
+service ip6tables stop
+chkconfig iptables off
+chkconfig ip6tables off
 
 ```
