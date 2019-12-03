@@ -2,7 +2,7 @@
 ```txt
 集群本地root用户密码是root
 虚拟机用户sheldon密码是sheldon
-
+（1）配置网络
 最小化安装centos7虚拟机后是不能上网的
 编辑网卡文件
 vi /etc/sysconfig/network-scripts/ifcfg-ens0s3
@@ -22,6 +22,7 @@ DNS2=8.8.8.8
 
 保存后重启网络 service network restart
 
+（2）关闭防火墙
 方便每台虚拟机相互通信，防止因为防火墙造成连接失败，关闭防火墙
 service iptables stop
 service ip6tables stop
@@ -30,6 +31,11 @@ chkconfig ip6tables off
 
 vi /etc/selinux/config 
 SELINUX=disabled
+
+（3）配置yum
+yum clean all
+yum makecache
+
 
 
 
