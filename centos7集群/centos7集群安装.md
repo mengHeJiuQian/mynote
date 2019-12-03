@@ -34,8 +34,9 @@ SELINUX=disabled
 
 （3）配置yum
 yum clean all
-yum makecache
+yum makecache #生成最新的元数据缓存
 
+（4）
 
 
 
