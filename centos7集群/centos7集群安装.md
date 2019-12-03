@@ -10,7 +10,13 @@ vi /etc/sysconfig/network-scripts/ifcfg-ens0s3
 保存文件后,重启 网卡 service network restart
 
 再次编辑/etc/sysconfig/network-scripts/ifcfg-ens0s3
-增加如下属性
+增加如下属性,已有的相同属性配置直接修改即可.这里的IP、网关根据自己的主机查看，执行ifconfig就可看到。
+BOOTPROTO=static
+IPADDR=192.168.16.X
+NETMASK=255.255.255.0
+GATEWAY=192.168.0.1
+
+service network restart
 
 
 ```
