@@ -77,6 +77,13 @@ perl -v
 
 # ssh免密码配置
 ```txt
+在/etc/hosts文件里添加IP和主机名的映射
+192.168.16.171 eshop-cache01
+192.168.16.172 eshop-cache02
+192.168.16.173 eshop-cache03
+192.168.16.174 eshop-cache04
 
+在一台机器上配置好映射后，复制到其他机器上
+scp 
 
 ```
