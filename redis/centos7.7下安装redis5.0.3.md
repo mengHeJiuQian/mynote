@@ -48,10 +48,8 @@ chkconfig redis_6379 on
 
 # 关闭redis服务
 ```
-关闭redis服务
-redis-cli shutdown           
-制定要连接的ip和端口号  
-redis-cli -h 127.0.0.1 -p 6379 SHUTDOWN             
-redis-cli PING            ping redis的端口，看是否正常
-redis-cli         进入交互式命令行
+redis-cli shutdown        关闭redis服务
+redis-cli -h 127.0.0.1 -p 6379 SHUTDOWN        制定要连接的ip和端口号
+redis-cli PING        ping redis的端口，看是否正常
+redis-cli        进入交互式命令行
 ```
