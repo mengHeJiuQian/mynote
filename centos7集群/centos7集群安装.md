@@ -40,10 +40,22 @@ yum makecache #生成最新的元数据缓存
 yum install -y wget net-tools lrzsz
 
 （5）安装JDK
-解压tar.gz，配置环境变量
+解压tar.gz，配置环境变量vi /etc/profile
 export JAVA_HOME=/usr/local/app/jdk8.xxxxxx
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 export PATH=$PATH:$JAVA_HOME/bin
+
+让环境变量生效
+source /etc/profile
+
+验证Java是否安装配置完善 
+java -version
+会打印出Java的一些信息
+
+（6）安装Perl
+
+
+
 
 
 
