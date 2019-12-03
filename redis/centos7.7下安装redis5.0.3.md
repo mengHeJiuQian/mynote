@@ -17,4 +17,12 @@ cd redis-5.0.3
 make 
 make test 
 make install PREFIX=/usr/local/app/redis-bin
+
+完成。
+```
+
+# redis开机自启
+```
+在解压的redis目录下的utils目录下，有个redis_init_script文件
+
 ```
