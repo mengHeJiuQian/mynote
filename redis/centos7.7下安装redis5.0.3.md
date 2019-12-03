@@ -3,11 +3,12 @@
 redis安装之前需要先安装tcl工具
 wget http://downloads.sourceforge.net/tcl/tcl8.6.1-src.tar.gz
 tar -xzvf tcl8.6.1-src.tar.gz
-cd  /usr/local/tcl8.6.1/unix/
+cd  /.../tcl8.6.1/unix/
 ./configure  
 make && make install
 ```
 
+#安装redis
 ```txt
 
 
