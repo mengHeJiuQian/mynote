@@ -88,7 +88,8 @@ perl -v
 
 （2）配置机器之间免密码通信
 生成ssh秘钥
-ssh-kengen
+ssh-keygen -t rsa
+
 
 
 ```
