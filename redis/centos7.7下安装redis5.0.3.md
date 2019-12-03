@@ -25,8 +25,8 @@ make install PREFIX=/usr/local/app/redis-bin
 ```
 把redis作为一个系统的daemon进程去运行的，每次系统启动，redis进程一起启动
 （1）在解压的redis目录下的utils目录下，有个redis_init_script脚本文件
-（2）将redis_init_script脚本拷贝到linux的/etc/init.d目录中，将redis_init_script重命名为redis_6379，6379是我们希望这个redis实例监听的端口号
-（3）修改redis_6379脚本的第6行的REDISPORT，设置为相同的端口号（默认就是6379）
+（2）将redis_init_script脚本拷贝到/etc/init.d目录下，将redis_init_script重命名为redis_6379，6379是我们希望这个redis实例监听的端口号
+（3）修改redis_6379脚本中的REDISPORT配置参数，设置为相同的端口号（默认就是6379）
 （4）创建两个目录：/etc/redis（存放redis的配置文件），/var/redis/6379（存放redis的持久化文件）
 （5）修改redis配置文件（默认在根目录下，redis.conf），拷贝到/etc/redis目录中，修改名称为6379.conf
 
