@@ -89,10 +89,13 @@ perl -v
 （2）配置机器之间免密码通信
 生成ssh秘钥，生成的信息在~/.ssh/下
 ssh-keygen -t rsa
+将对外的秘钥写到~/.ssh/authorized_keys文件里，没authorized_keys文件就创建。
+cat id_rsa.pub  > authorized_keys
 
+在另外的机器节点上
 使用ssh-copy-id -i hostname命令将本机的公钥拷贝到指定机器的authorized_keys文件中
 ssh-copy-id -i
-cat id_rsa.pub  > authorized_keys
+
 
 
 
