@@ -65,7 +65,11 @@ make test
 make install
 perl -v
 
+（7）在4个虚拟机中安装CentOS集群
 
+（1）按照上述步骤，再安装三台一模一样环境的linux机器
+（2）另外三台机器的hostname分别设置为eshop-cache02，eshop-cache03，eshop-cache04
+（3）安装好之后，在每台机器的hosts文件里面，配置好所有的机器的ip地址到hostname的映射关系
 
 
 
