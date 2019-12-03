@@ -42,9 +42,7 @@ dir 		/var/redis/6379				设置持久化文件的存储位置
 在redis_6379脚本中，最上面，加入两行注释
 
 # chkconfig:   2345 90 10
-
 # description:  Redis is a persistent key-value database
-
 chkconfig redis_6379 on
 
 ```
