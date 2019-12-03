@@ -5,6 +5,6 @@
 
 最小化安装centos7虚拟机后是不能上网的
 编辑网卡文件
-vi /etc/sysconfig/network-scripts
+vi /etc/sysconfig/network-scripts/
 
 ```
