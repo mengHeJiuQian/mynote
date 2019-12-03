@@ -1,4 +1,4 @@
-# 安装过程记录
+# 安装Centos7过程记录
 ```txt
 集群本地root用户密码是root
 虚拟机用户sheldon密码是sheldon
@@ -71,7 +71,8 @@ perl -v
 （2）另外三台机器的hostname分别设置为eshop-cache02，eshop-cache03，eshop-cache04
 （3）安装好之后，在每台机器的hosts文件里面，配置好所有的机器的ip地址到hostname的映射关系
 
-
-
+有一个简单的不用重复安装虚拟机的方式，将安装好的虚拟机关闭，右键“复制”，选择虚拟机存放路径，选择全部重新生成网卡，下一步，选择完全复制。就OK了。
 
 ```
+
+# ssh
