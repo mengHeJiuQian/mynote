@@ -92,8 +92,7 @@ ssh-keygen -t rsa
 将对外的秘钥写到~/.ssh/authorized_keys文件里，没authorized_keys文件就创建。
 cat id_rsa.pub  > authorized_keys
 
-在另外的机器节点上
-使用ssh-copy-id -i hostname命令将本机的公钥拷贝到指定机器的authorized_keys文件中
+在另外三台的机器节点上也生成各自的authorized_keys，并使用ssh-copy-id -i hostname命令将各自机器里生成的公钥拷贝到指定第一台机器的authorized_keys文件中
 ssh-copy-id -i
 
 
