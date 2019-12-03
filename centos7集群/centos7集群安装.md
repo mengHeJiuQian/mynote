@@ -40,7 +40,10 @@ yum makecache #生成最新的元数据缓存
 yum install -y wget net-tools lrzsz
 
 （5）安装JDK
-
+解压tar
+export JAVA_HOME=/usr/local/java/jdk1.8.0_191
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export PATH=$PATH:$JAVA_HOME/bin
 
 
 
