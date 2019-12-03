@@ -44,5 +44,9 @@ dir 		/var/redis/6379				设置持久化文件的存储位置
 # chkconfig:   2345 90 10
 # description:  Redis is a persistent key-value database
 chkconfig redis_6379 on
+```
 
+# 关闭redis服务
+```
+redis-cli shutdown
 ```
