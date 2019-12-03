@@ -39,7 +39,8 @@ yum makecache #生成最新的元数据缓存
 （4）安装一些工具
 yum install -y wget net-tools lrzsz
 
-（5）安装Perl
+（5）安装JDK
+
 
 
 
