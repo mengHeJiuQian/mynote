@@ -87,8 +87,11 @@ perl -v
 [root@eshop-cache01 ~]# scp /etc/hosts root@192.168.16.174:/etc/
 
 （2）配置机器之间免密码通信
-生成ssh秘钥
+生成ssh秘钥，生成的信息在~/.ssh/下
 ssh-keygen -t rsa
+将公钥拷贝authorized_keys文件中，作为免密登录的公钥
+cat id_rsa.pub  > authorized_keys
+
 
 
 
