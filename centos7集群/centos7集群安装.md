@@ -97,8 +97,8 @@ eshop-cache02里执行ssh-copy-id -i eshop-cache01
 eshop-cache03里执行ssh-copy-id -i eshop-cache01
 eshop-cache04里执行ssh-copy-id -i eshop-cache01
 
-此时eshop-cache01主机的authorized_keys就有了
-
+此时eshop-cache01主机的authorized_keys就有了四个主机的公钥，将eshop-cache01的authorized_keys拷贝到另外三台机器的~/.ssh/目录下。以上，四台主机之间实现了相互之间免密登录。
+scp /root/.ssh/authorized_keys root@eshop-cache02:/root
 
 
 
