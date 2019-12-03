@@ -63,7 +63,7 @@ cd perl-5.28.1
 make
 make test
 make install
-
+perl -v
 
 
 
