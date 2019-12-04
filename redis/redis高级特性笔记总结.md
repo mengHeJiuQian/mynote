@@ -85,6 +85,13 @@ auto-aof-rewrite-percentage 100
 auto-aof-rewrite-min-size 64mb
 ```
 
+**rewrite过程**
+（1）满足rewrite条件，redis fork一个子进程。
+（2）子进程基于当前内存中的数据，构建日志，开始往一个新的临时的AOF文件中写入日志。
+（3）redis主进程，接收到client新的写操作之后，在内存中记录新的写操作，同时新的写操作也继续写入旧的AOF文件。
+（4）子进程写完新的日志文件之后，redis主进程将内存中的新日志再次追加到新的AOF文件中。
+（5）用新的日志文件替换掉旧的日志文件，旧的文件就不存了。
+
 # AOF破损文件的修复
 如果redis在append数据到AOF文件时，机器宕机了，可能会导致AOF文件破损，用redis-check-aof --fix命令来修复破损的AOF文件。
 ```shell
