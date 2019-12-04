@@ -67,10 +67,21 @@ RDB，就是一份数据文件，恢复的时候，直接加载到内存中即�
 
 （3）综合使用AOF和RDB两种持久化机制，用AOF来保证数据不丢失，作为数据恢复的第一选择; 用RDB来做不同程度的冷备，在AOF文件都丢失或损坏不可用的时候，还可以使用RDB来进行快速的数据恢复
 
-# 配置
+# 持久化配置
+**AOF配置**
+编辑redis.conf配置文件，查找appendonly，将no改为 yes，完成。aof同步的级别有
 ```
 # appendfsync always
 appendfsync everysec
 # appendfsync no
+
+always: 每次写入一条数据，立即将这个数据对应的写日志fsync到磁盘上去，性能非常非常差，吞吐量很低; 确保说redis里的数据一条都不丢，那就只能这样了
+
+mysql -> 内存策略，大量磁盘，QPS到多少，一两k。QPS，每秒钟的请求数量
+redis -> 内存，磁盘持久化，QPS到多少，单机，一般来说，上万QPS没问题
+
+everysec: 每秒将os cache中的数据fsync到磁盘，这个最常用的，生产环境一般都这么配置，性能很高，QPS还是可以上万的
+
+no: 仅仅redis负责将数据写入os cache就撒手不管了，然后后面os自己会时不时有自己的策略将数据刷入磁盘，不可控了
 ```
 
