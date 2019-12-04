@@ -67,4 +67,10 @@ RDB，就是一份数据文件，恢复的时候，直接加载到内存中即�
 
 （3）综合使用AOF和RDB两种持久化机制，用AOF来保证数据不丢失，作为数据恢复的第一选择; 用RDB来做不同程度的冷备，在AOF文件都丢失或损坏不可用的时候，还可以使用RDB来进行快速的数据恢复
 
+# 配置
+```
+# appendfsync always
+appendfsync everysec
+# appendfsync no
+```
 
