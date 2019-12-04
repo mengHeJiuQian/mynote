@@ -96,9 +96,14 @@ auto-aof-rewrite-min-size 64mb
 # 执行aof rewrite操作
 127.0.0.1:6379> BGREWRITEAOF 
 
-127.0.0.1:6379> BGREWRITEAOF 
-127.0.0.1:6379> BGREWRITEAOF 
-SAVE 直接调用 rdbSave ，阻塞 Redis 主进程，直到保存完成为止。在主进程阻塞期间，服务器不能处理客户端的任何请求。• BGSAVE 则 fork 出一个子进程，子进程负责调用 rdbSave ，并在保存完成之后向主进程发送信号，通知保存已完成。
+# 阻塞的方式调用rdb的持久化
+127.0.0.1:6379> save
+
+#非阻塞的方式调用rdb的持久化
+127.0.0.1:6379> bgsave 
+
+# SAVE 直接调用 rdbSave ，阻塞 Redis 主进程，直到保存完成为止。在主进程阻塞期间，服务器不能处理客户端的任何请求。
+# BGSAVE 则 fork 出一个子进程，子进程负责调用 rdbSave ，并在保存完成之后向主进程发送信号，通知保存已完成。子进程执行期间，
 ```
 
 # AOF破损文件的修复
