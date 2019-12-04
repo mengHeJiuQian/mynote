@@ -80,3 +80,10 @@ RDB，就是一份数据文件，恢复的时候，直接加载到内存中即�
 # rewrite策略
 在redis.conf中，可以配置rewrite策略
 
+# AOF破损文件的修复
+如果redis在append数据到AOF文件时，机器宕机了，可能会导致AOF文件破损，用redis-check-aof --fix命令来修复破损的AOF文件。
+```shell
+# 将损坏的那部分命令删掉。
+ redis-check-aof --fix /var/redis/6379/appendonly.aof 
+```
+
