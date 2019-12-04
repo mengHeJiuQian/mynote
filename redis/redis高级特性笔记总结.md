@@ -92,6 +92,11 @@ auto-aof-rewrite-min-size 64mb
 （4）子进程写完新的日志文件之后，redis主进程将内存中的新日志再次追加到新的AOF文件中。
 （5）用新的日志文件替换掉旧的日志文件，旧的文件就不存了。
 
+```shell
+# 执行rewrite操作
+127.0.0.1:6379> BGREWRITEAOF 
+```
+
 # AOF破损文件的修复
 如果redis在append数据到AOF文件时，机器宕机了，可能会导致AOF文件破损，用redis-check-aof --fix命令来修复破损的AOF文件。
 ```shell
@@ -99,3 +104,7 @@ auto-aof-rewrite-min-size 64mb
  redis-check-aof --fix /var/redis/6379/appendonly.aof 
 ```
 
+# AOF和RDB同时工作
+1. 如果RDB在执行snapshotting操作，那么redis不会执行AOF rewrite; 如果redis再执行AOF rewrite，那么就不会执行RDB snapshotting。
+2. 如果RDB在执行snapshotting，此时用户执行BGREWRITEAOF命令，那么等RDB快照生成之后，才会去执行AOF rewrite。
+3. 同时有RDB snapshot文件和AOF日志文件，那么redis重启的时候，会优先使用AOF进行数据恢复，因为其中的日志更完整。
