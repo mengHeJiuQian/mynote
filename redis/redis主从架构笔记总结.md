@@ -73,3 +73,8 @@ replica-read-only yes    #从节点只能处理读请求
 如果主节点配置了requirepass来验证身份，那么从节点需要配置masterauth作为身份验证的密码。
 
 ```
+
+# 读写性能测试
+```
+$ redis-benchmark -h 主机名 -a 密码
+```
