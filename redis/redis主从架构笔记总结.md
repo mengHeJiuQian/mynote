@@ -69,6 +69,7 @@ replicaof eshop-cache01 6379    #redis主节点和端口号，用于通信
 replica-read-only yes    #从节点只能处理读请求
 主节点和从节点的bind参数改为redis主机的IP地址，默认是127.0.0.1，只能本地访问redis。
 **记得关闭防火墙。**
+此时连接redis需要制定-h 主机名或IP才能连，如：redis-cli -h 192.168.199.172。
 如果主节点配置了requirepass来验证身份，那么从节点需要配置masterauth作为身份验证的密码。
 
 ```
