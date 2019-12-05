@@ -65,5 +65,6 @@ dir 		/var/redis/6379				设置持久化文件的存储位置
 chkconfig redis_6379 on
 
 以上配置和master节点配置没有什么不同，slave需要配置主节点和强制只读操作。
-
+Redis5.0所以配置不死slaveof而是replicaof
+re
 ```
