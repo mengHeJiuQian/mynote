@@ -24,6 +24,6 @@ repl-diskless-sync
 repl-diskless-sync-delay    #等待一定时长再开始复制，因为要等更多slave重新连接过来
 ```
 
-4、过期key处理
+**过期key处理**
 
 slave不会过期key，只会等待master过期key。如果master过期了一个key，或者通过LRU淘汰了一个key，那么会模拟一条del命令发送给slave。
