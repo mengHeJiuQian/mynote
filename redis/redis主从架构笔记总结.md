@@ -67,6 +67,7 @@ chkconfig redis_6379 on
 以上配置和master节点配置没有什么不同，slave节点还需以下配置。Redis5.0配置的slaveof改为了replicaof
 replicaof eshop-cache01 6379    #redis主节点和端口号，用于通信  
 replica-read-only yes    #从节点只能处理读请求
+主节点和从节点的bind参数改为redis主机的IP地址，
 
 如果主节点配置了requirepass来验证身份，那么从节点需要配置masterauth作为身份验证的密码。
 
