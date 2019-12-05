@@ -64,9 +64,8 @@ dir 		/var/redis/6379				设置持久化文件的存储位置
 # description:  Redis is a persistent key-value database
 chkconfig redis_6379 on
 
-以上配置和master节点配置没有什么不同，slave需要配置主节点和强制只读操作。
-Redis5.0所以配置不是slaveof而是replicaof
-replicaof eshop-cache01 6379
-replica-read-only yes 从节点
+以上配置和master节点配置没有什么不同，slave节点还需以下配置。Redis5.0配置的slaveof改为了replicaof
+replicaof eshop-cache01 6379    #redis主节点和端口号，用于通信  
+replica-read-only yes    #从节点只能处理读请求
 
 ```
