@@ -12,16 +12,17 @@ slave node如果跟master node有网络故障，断开了连接，会自动重�
 
 从redis 2.8开始，就支持主从复制的断点续传，如果主从复制过程中，网络连接断掉了，那么可以接着上次复制的地方，继续复制下去，而不是从头开始复制一份。
 
-master node会在内存中常见一个backlog，master和slave都会保存一个replica offset还有一个master id，offset就是保存在backlog中的。如果master和slave网络连接断掉了，slave会让master从上次的replica offset开始继续复制。
+master node会在内存中常见一个**backlog**，master和slave都会保存一个**replica offset**还有一个master id，offset就是保存在backlog中的。如果master和slave网络连接断掉了，slave会让master从上次的replica offset开始继续复制。
 
 但是如果没有找到对应的offset，那么就会执行一次resynchronization
 
-3、无磁盘化复制
+**无磁盘化复制**
 
-master在内存中直接创建rdb，然后发送给slave，不会在自己本地落地磁盘了
-
+master在内存中直接创建rdb，然后发送给slave，不会在自己本地落地磁盘了。这里涉及redis.conf文件两个配置。
+```
 repl-diskless-sync
-repl-diskless-sync-delay，等待一定时长再开始复制，因为要等更多slave重新连接过来
+repl-diskless-sync-delay    #等待一定时长再开始复制，因为要等更多slave重新连接过来
+```
 
 4、过期key处理
 
