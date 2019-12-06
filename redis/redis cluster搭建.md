@@ -11,7 +11,7 @@ port 7001
 cluster-enabled yes
 cluster-config-file /etc/redis-cluster/node-7001.conf
 cluster-node-timeout 15000
-daemonize	yes							
+daemonize	yes	
 pidfile		/var/run/redis_7001.pid 						
 dir 		/var/redis/7001		
 logfile /var/log/redis/7001.log
@@ -32,4 +32,20 @@ yum install -y rubygems
 gem install redis
 
 cp /usr/local/redis-3.2.8目录/src/redis-trib.rb /usr/local/bin
+
+redis-trib.rb create --replicas 1 192.168.31.187:7001 192.168.31.187:7002 192.168.31.19:7003 192.168.31.19:7004 192.168.31.227:7005 192.168.31.227:7006
+
+--replicas: 每个master有几个slave
+
+6台机器，3个master，3个slave，尽量自己让master和slave不在一台机器上
+
+yes
+
+redis-trib.rb check 192.168.31.187:7001
+
+4、读写分离+高可用+多master
+
+读写分离：每个master都有一个slave
+高可用：master宕机，slave自动被切换过去
+多master：横向扩容支持更大数据量
 ```
