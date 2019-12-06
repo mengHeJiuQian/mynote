@@ -112,7 +112,7 @@ sentinel parallel-syncs mymaster 1
 
 port 5000
 bind 192.168.31.227
-dir /var/sentinal/5000
+dir /var/sentinel/5000
 sentinel monitor mymaster 192.168.31.187 6379 2
 sentinel down-after-milliseconds mymaster 30000
 sentinel failover-timeout mymaster 60000
@@ -122,8 +122,8 @@ sentinel parallel-syncs mymaster 1
 
 在eshop-cache01、eshop-cache02、eshop-cache03三台机器上，分别启动三个哨兵进程，组成一个集群，观察一下日志的输出
 ```
-redis-sentinel /etc/sentinal/5000.conf
-redis-server /etc/sentinal/5000.conf --sentinel
+redis-sentinel /etc/sentinel/5000.conf
+redis-server /etc/sentinel/5000.conf --sentinel
 ```
 日志里会显示出来，每个哨兵都能去监控到对应的redis master，并能够自动发现对应的slave
 
