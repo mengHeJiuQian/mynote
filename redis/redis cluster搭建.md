@@ -31,5 +31,5 @@ yum install -y ruby
 yum install -y rubygems
 gem install redis
 
-cp /usr/local/redis-3.2.8/src/redis-trib.rb /usr/local/bin
+cp /usr/local/redis-3.2.8目录/src/redis-trib.rb /usr/local/bin
 ```
