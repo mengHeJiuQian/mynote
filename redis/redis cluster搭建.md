@@ -22,5 +22,14 @@ appendonly yes
 ```
 cp redis_6379 redis_7001
 vi redis_7001
-在redis_7001中修改下PORT参数
+在redis_7001中修改下PORT参数为7001
+```
+
+创建redis cluster的脚本用ruby写的，需要先安装ruby。cluster的创建只需要在一台机器上执行就行了。所以一下命令在一台机器上执行即可。
+```shell
+yum install -y ruby
+yum install -y rubygems
+gem install redis
+
+cp /usr/local/redis-3.2.8/src/redis-trib.rb /usr/local/bin
 ```
