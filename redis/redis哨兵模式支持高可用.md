@@ -121,10 +121,10 @@ sentinel parallel-syncs mymaster 1
 3、启动哨兵进程
 
 在eshop-cache01、eshop-cache02、eshop-cache03三台机器上，分别启动三个哨兵进程，组成一个集群，观察一下日志的输出
-
+```
 redis-sentinel /etc/sentinal/5000.conf
 redis-server /etc/sentinal/5000.conf --sentinel
-
+```
 日志里会显示出来，每个哨兵都能去监控到对应的redis master，并能够自动发现对应的slave
 
 哨兵之间，互相会自动进行发现，用的就是之前说的pub/sub，消息发布和订阅channel消息系统和机制
