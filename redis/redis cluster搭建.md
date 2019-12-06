@@ -33,7 +33,7 @@ gem install redis
 
 cp /usr/local/redis-3.2.8目录/src/redis-trib.rb /usr/local/bin
 
-redis-trib.rb create --replicas 1 192.168.31.187:7001 192.168.31.187:7002 192.168.31.19:7003 192.168.31.19:7004 192.168.31.227:7005 192.168.31.227:7006
+redis-trib.rb create --replicas 1 192.168.16.171:7001 192.168.16.171:7002 192.168.16.172:7003 192.168.16.172:7004 192.168.16.173:7005 192.168.16.173:7006
 
 --replicas: 每个master有几个slave
 
@@ -41,7 +41,7 @@ redis-trib.rb create --replicas 1 192.168.31.187:7001 192.168.31.187:7002 192.16
 
 yes
 
-redis-trib.rb check 192.168.31.187:7001
+redis-trib.rb check 192.168.16.171:7001
 
 4、读写分离+高可用+多master
 
