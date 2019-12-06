@@ -19,7 +19,7 @@
 # sdown（主观宕机）和odown（客观宕机）转换机制  
 
 # 三节点哨兵模式部署
-1、哨兵的配置文件 sentinel.conf
+## 哨兵的配置文件 sentinel.conf
 
 每一个哨兵都可以去监控多个maser-slaves的主从架构
 因为可能你的公司里，为不同的项目，部署了多个master-slaves的redis主从集群
@@ -69,7 +69,7 @@ parallel-syncs，新的master别切换之后，同时有多少个slave被切换�
 
 failover-timeout，执行故障转移的timeout超时时长
 
-2、在eshop-cache03上再部署一个redis
+## 安装
 
 只要安装redis就可以了，不需要去部署redis实例的启动
 
