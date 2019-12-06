@@ -19,4 +19,8 @@ bind 192.168.31.187
 appendonly yes
 ```
 
-/etc/
+```
+cp redis_6379 redis_7001
+vi redis_7001
+在redis_7001中修改下PORT参数
+```
