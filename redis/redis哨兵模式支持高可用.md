@@ -89,14 +89,14 @@ make install
 
 哨兵默认用26379端口，默认不能跟其他机器在指定端口连通，只能在本地访问
 
-mkdir /etc/sentinal
-mkdir -p /var/sentinal/5000
+mkdir /etc/sentinel
+mkdir -p /var/sentinel/5000
 
 /etc/sentinel/5000.conf
 
 port 5000
 bind 192.168.31.187
-dir /var/sentinal/5000
+dir /var/sentinel/5000
 sentinel monitor mymaster 192.168.31.187 6379 2
 sentinel down-after-milliseconds mymaster 30000
 sentinel failover-timeout mymaster 60000
