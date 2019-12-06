@@ -18,3 +18,5 @@ logfile /var/log/redis/7001.log
 bind 192.168.31.187		
 appendonly yes
 ```
+
+/etc/
