@@ -61,6 +61,17 @@ ulimit -a 可以显示一些系统限制。
 执行 ulimit -n 10032，设置应用打开文件的最大个数为10032。
 ```
 
+# 验证redis cluster
+```bash
+# -a访问服务端密码，-c表示集群模式，指定ip地址和端口号
+$ redis-cli -c -a xxx -h 192.168.199.171 -p 7001
+
+#进入之后执行如下
+>  cluster info（查看集群信息）
+> cluster nodes（查看节点列表）
+```
+
+
 4、读写分离+高可用+多master
 
 读写分离：每个master都有一个slave
