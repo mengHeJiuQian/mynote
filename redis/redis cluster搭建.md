@@ -26,7 +26,7 @@ vi redis_7001
 ```
 
 redis5以前的版本集群是依靠ruby脚本redis-trib.rb实现，需要先安装ruby。cluster的创建只需要在一台机器上执行就行了。所以一下命令在一台机器上执行即可。
-**redis5**
+**redis5之前版本创建方式**
 ```shell
 yum install -y ruby
 yum install -y rubygems
@@ -44,6 +44,12 @@ yes
 
 redis-trib.rb check 192.168.16.171:7001
 
+```
+
+**redis5及之后版本创建方式**
+```shell
+$ redis-cli --cluster create --cluster-replicas 1 192.168.199.171:7001 192.168.199.171:7002 192.168.199.172:7003 192.168.199.171:7004 172.17.0.5:8005 172.17.0.5:8006
+创建期间出现的选项点击yes
 ```
 
 4、读写分离+高可用+多master
