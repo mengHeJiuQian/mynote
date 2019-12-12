@@ -15,7 +15,7 @@ daemonize	yes
 pidfile		/var/run/redis_7001.pid 						
 dir 		/var/redis/7001		
 logfile /var/log/redis/7001.log
-bind 192.168.31.187		
+bind 192.168.199.171		
 appendonly yes
 ```
 
