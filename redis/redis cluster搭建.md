@@ -25,7 +25,8 @@ vi redis_7001
 在redis_7001中修改下PORT参数为7001
 ```
 
-创建redis cluster的脚本用ruby写的，需要先安装ruby。cluster的创建只需要在一台机器上执行就行了。所以一下命令在一台机器上执行即可。
+redis5以前的版本集群是依靠ruby脚本redis-trib.rb实现，需要先安装ruby。cluster的创建只需要在一台机器上执行就行了。所以一下命令在一台机器上执行即可。
+**redis5**
 ```shell
 yum install -y ruby
 yum install -y rubygems
@@ -43,9 +44,10 @@ yes
 
 redis-trib.rb check 192.168.16.171:7001
 
+```
+
 4、读写分离+高可用+多master
 
 读写分离：每个master都有一个slave
 高可用：master宕机，slave自动被切换过去
 多master：横向扩容支持更大数据量
-```
