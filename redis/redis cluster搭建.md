@@ -52,6 +52,15 @@ $ redis-cli --cluster create --cluster-replicas 1 192.168.199.171:7001 192.168.1
 创建期间出现的选项点击yes
 ```
 
+# 系统及参数调整
+```
+redis cluster启动时有如下日志：增加应用打开文件的最大个数为10032。
+Increased maximum number of open files to 10032 (it was originally set to 1024).
+
+ulimit -a 可以显示一些系统限制。
+执行 ulimit -n 10032，设置应用打开文件的最大个数为10032。
+```
+
 4、读写分离+高可用+多master
 
 读写分离：每个master都有一个slave
