@@ -65,12 +65,15 @@ $ su - elk
 
 ```
 
-#启动时遇到的错误
+## 启动时遇到的错误1
 ```txt
 ERROR: [1] bootstrap checks failed
 [1]: max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
 
+修改/etc/sysctl.conf文件添加以下配置
+vm.max_map_count = 655300
 
+sysctl -p
 ```
 
 
