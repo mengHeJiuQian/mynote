@@ -47,13 +47,7 @@ bootstrap.memory_lock: false
 bootstrap.system_call_filter: false
 
 # ---------------------------------- Network -----------------------------------
-#
-# Set the bind address to a specific IP (IPv4 or IPv6):
-#
 network.host: 0.0.0.0
-#
-# Set a custom port for HTTP:
-#
 http.port: 9200
 ```
 
