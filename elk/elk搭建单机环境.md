@@ -30,28 +30,22 @@ elk     ALL=(ALL)       ALL # 增加这一行
 $ tar -axvf elasticsearch-7.5.1-linux-x86_64.tar.gz 
 ```
 进入解压后的目录下的config目录，修改elasticsearch.yml文件，下面是修改后的yml文件内容
-```yml
+```txt
 # ---------------------------------- Cluster -----------------------------------
 cluster.name: es
 
 # ------------------------------------ Node ------------------------------------
 node.name: node-1
+
 # ----------------------------------- Paths ------------------------------------
 path.data: /usr/local/app/elasticsearch-7.5.1/data
 path.logs: /usr/local/app/elasticsearch-7.5.1/logs
+
 # ----------------------------------- Memory -----------------------------------
-#
-# Lock the memory on startup:
-#
+# 启动时锁定内存
 bootstrap.memory_lock: false
 bootstrap.system_call_filter: false
-#
-# Make sure that the heap size is set to about half the memory available
-# on the system and that the owner of the process is allowed to use this
-# limit.
-#
-# Elasticsearch performs poorly when the system is swapping the memory.
-#
+
 # ---------------------------------- Network -----------------------------------
 #
 # Set the bind address to a specific IP (IPv4 or IPv6):
