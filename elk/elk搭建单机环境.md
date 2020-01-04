@@ -12,7 +12,13 @@ $ useradd elk -m -U -p elk
 
 # 将用户elk加入到/etc/sudoers文件中，让elk用户具有和root一样高的权限
 $ whereis sudoers
+sudoers: /etc/sudoers /etc/sudoers.d /usr/share/man/man5/sudoers.5.gz
 
+$ ls -l /etc/sudoers
+-r--r----- 1 root root 4328 Oct 24 23:23 /etc/sudoers
+$ chmod u+w /etc/sudoers
+
+$ vim /etc/sudoers
 
 ```
 
