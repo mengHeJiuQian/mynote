@@ -14,7 +14,7 @@ $ useradd elk -m -U -p elk
 $ whereis sudoers
 sudoers: /etc/sudoers /etc/sudoers.d /usr/share/man/man5/sudoers.5.gz
 
-$ ls -l /etc/sudoers
+$ ls -l /etc/sudoers # 发现没有写权限，
 -r--r----- 1 root root 4328 Oct 24 23:23 /etc/sudoers
 $ chmod u+w /etc/sudoers
 
