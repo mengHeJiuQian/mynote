@@ -30,4 +30,8 @@ elk     ALL=(ALL)       ALL # 增加这一行
 $ tar -axvf elasticsearch-7.5.1-linux-x86_64.tar.gz 
 ```
 进入解压后的目录下的config目录，修改elasticsearch.yml文件，下面是修改后的yml文件内容
+```yml
+
+
+```
 
