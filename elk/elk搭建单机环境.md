@@ -21,6 +21,8 @@ $ chmod u+w /etc/sudoers
 $ vim /etc/sudoers
 ## Allow root to run any commands anywhere 
 root    ALL=(ALL)       ALL
-elk     ALL=(ALL)       ALL
+elk     ALL=(ALL)       ALL # 增加这一行
 ```
+
+# 安装
 
