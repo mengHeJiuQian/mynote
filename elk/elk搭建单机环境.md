@@ -22,6 +22,9 @@ $ vim /etc/sudoers
 ## Allow root to run any commands anywhere 
 root    ALL=(ALL)       ALL
 elk     ALL=(ALL)       ALL # 增加这一行
+
+# 接下来使用elk用户进行安装es的操作
+$ su - elk 
 ```
 
 # 安装elasticsearch-7.5.1
