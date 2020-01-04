@@ -24,5 +24,8 @@ root    ALL=(ALL)       ALL
 elk     ALL=(ALL)       ALL # 增加这一行
 ```
 
-# 安装
+# 安装elasticsearch-7.5.1
+```bash
+$ 
+```
 
