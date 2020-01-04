@@ -10,7 +10,7 @@
 $ useradd elk -m -U -p elk
 # 说明：-m表示创建用户的home目录，-U 表示创建同名的组，-p表示密码
 
-
+# 将用户elk加入到/etc/sudoers文件中，
 
 ```
 
