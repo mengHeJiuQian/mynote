@@ -4,7 +4,9 @@
 
 # 创建elk用户
 > 由于es不能以root用户身份启动，创建一个新用户elk用于启动es。
-```bash
-
 
 ```
+
+useradd elk -m -U -p elk
+```
+
