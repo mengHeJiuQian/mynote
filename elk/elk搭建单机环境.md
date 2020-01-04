@@ -49,5 +49,11 @@ bootstrap.system_call_filter: false
 # ---------------------------------- Network -----------------------------------
 network.host: 0.0.0.0
 http.port: 9200
+
+# --------------------------------- Discovery ----------------------------------
+cluster.initial_master_nodes: ["node-1"]
 ```
+
+# 启动
+
 
