@@ -58,12 +58,10 @@ cluster.initial_master_nodes: ["node-1"]
 ```
 
 # 启动es
-进入es安装目录下的bin目录，用elk用户执行 ./elasticsearch
-```bash
-$ su - elk
-./
+进入es安装目录下的bin目录，用elk用户执行 ./elasticsearch启动
 
-```
+访问127.0.0.1:9200查看是否能访问并返回数据。
+
 
 ## 启动时遇到的错误1
 ```txt
@@ -76,4 +74,5 @@ vm.max_map_count = 655300
 执行命令 sysctl -p 是修改的配置生效
 ```
 
+# 安装kibana
 
