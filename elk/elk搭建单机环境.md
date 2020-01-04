@@ -73,7 +73,7 @@ ERROR: [1] bootstrap checks failed
 修改/etc/sysctl.conf文件添加以下配置
 vm.max_map_count = 655300
 
-sysctl -p
+执行命令 sysctl -p 是修改的配置生效
 ```
 
 
