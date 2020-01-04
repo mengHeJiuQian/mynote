@@ -54,6 +54,12 @@ http.port: 9200
 cluster.initial_master_nodes: ["node-1"]
 ```
 
-# 启动
+# 启动es
+进入es安装目录下的bin目录，用elk用户执行 ./elasticsearch
+```bash
+$ su - elk
+./
+
+```
 
 
