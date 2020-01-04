@@ -26,6 +26,8 @@ elk     ALL=(ALL)       ALL # 增加这一行
 
 # 安装elasticsearch-7.5.1
 ```bash
-$ 
+# 解压
+$ tar -axvf elasticsearch-7.5.1-linux-x86_64.tar.gz 
+
 ```
 
