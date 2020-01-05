@@ -74,5 +74,7 @@ vm.max_map_count = 655300
 执行命令 sysctl -p 是修改的配置生效
 ```
 
-# 安装kibana
+# 安装logstash-7.5.1
+
+
 
