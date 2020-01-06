@@ -84,7 +84,10 @@ ERROR: [1] bootstrap checks failed
 vm.max_map_count = 655300
 执行命令 sysctl -p 是修改的配置生效
 
-增大进程的文件描述符操作如下：
+增大max file descriptors操作如下：
+# 查看当前每个进程最大同时打开文件数太小
+$ ulimit -Hn # 
+$ ulimit -Sn # 软限制和硬限制
 
 ```
 
