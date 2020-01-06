@@ -77,11 +77,15 @@ cluster.initial_master_nodes: ["node-1"]
 ```txt
 ERROR: [1] bootstrap checks failed
 [1]: max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+[2]: max file descriptors [4096] for elasticsearch process is too low, increase to at least [65535]
 
+增大max_map_count操作如下：
 修改/etc/sysctl.conf文件添加以下配置
 vm.max_map_count = 655300
-
 执行命令 sysctl -p 是修改的配置生效
+
+增大进程的文件描述符操作如下：
+
 ```
 
 # 安装logstash-7.5.1
