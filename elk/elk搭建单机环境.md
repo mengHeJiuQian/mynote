@@ -85,10 +85,12 @@ vm.max_map_count = 655300
 执行命令 sysctl -p 是修改的配置生效
 
 增大max file descriptors操作如下：
-# 查看当前每个进程最大同时打开文件数太小
-$ ulimit -Hn # 
-$ ulimit -Sn # 软限制和硬限制
-
+查看当前每个进程最大同时打开文件数太小
+$ ulimit -Hn # 硬限制
+$ ulimit -Sn # 软限制
+针对elk用户增加限制的数量：sudo vim /etc/security/limit.conf，文件末尾增加下面内容
+elk soft nofile 65535
+elk hard nofile 65535
 ```
 
 # 安装logstash-7.5.1
