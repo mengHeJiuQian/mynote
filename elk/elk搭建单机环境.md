@@ -73,7 +73,7 @@ cluster.initial_master_nodes: ["node-1"]
 访问127.0.0.1:9200查看是否能访问并返回数据。
 
 
-## 启动时遇到的错误1
+## 启动时遇到的错误
 ```txt
 ERROR: [1] bootstrap checks failed
 [1]: max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
