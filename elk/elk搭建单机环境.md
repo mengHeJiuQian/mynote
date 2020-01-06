@@ -10,6 +10,8 @@
 $ useradd elk -m -U
 # 说明：-m表示创建用户的home目录，-U 表示创建同名的组
 
+$ passwd elk
+
 # 将用户elk加入到/etc/sudoers文件中，让elk用户具有和root一样高的权限
 $ whereis sudoers
 sudoers: /etc/sudoers /etc/sudoers.d /usr/share/man/man5/sudoers.5.gz
