@@ -10,6 +10,8 @@
 $ useradd elk -m -U
 # 说明：-m表示创建用户的home目录，-U 表示创建同名的组
 
+# elk用户设置密码，如果密码小于8位，会提示“BAD PASSWORD: The password is shorter than 8 characters”
+# 再次输入密码就会忽略掉该提示。
 $ passwd elk
 
 # 将用户elk加入到/etc/sudoers文件中，让elk用户具有和root一样高的权限
