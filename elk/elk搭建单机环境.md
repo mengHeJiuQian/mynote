@@ -36,8 +36,9 @@ $ su - elk
 # 解压
 $ tar -axvf elasticsearch-7.5.1-linux-x86_64.tar.gz 
 
-# 如果解压后es放置的目录需要root用户才能执行，需要使用chomd命令将es目录的拥有者改为elk
-# 因为es不能以root身份启动
+# 如果解压后es放置的目录需要root用户才能执行，需要使用chown命令将es目录的拥有者改为elk
+# 因为es不能以root身份启动，修改掉es目录的拥有者后避免一些文件访问权限上的麻烦
+$ sudo chmod -R elk elasticsearch-7.5.1/
 ```
 
 
