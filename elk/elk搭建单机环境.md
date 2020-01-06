@@ -102,6 +102,11 @@ http.port: 9600
 path.logs: /usr/local/app/logstash-7.5.1/logs-path
 ```
 
+# 启动logstash
+```
+	
+```
+
 
 
 
