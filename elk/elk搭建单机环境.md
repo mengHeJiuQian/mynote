@@ -75,7 +75,14 @@ vm.max_map_count = 655300
 ```
 
 # 安装logstash-7.5.1
-解压、进入解压后的目录，新建logs-path文件夹路径用于存储
+解压、进入解压后logstash的目录，新建logs-path文件夹路径用于存储运行的日志。
+进入logstash-7.5.1/config目录下，修改logstash.yml文件。修改后如下。
+```
+
+```
+
+
+
 
 
 
