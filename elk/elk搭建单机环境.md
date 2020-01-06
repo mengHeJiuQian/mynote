@@ -35,7 +35,12 @@ $ su - elk
 ```bash
 # 解压
 $ tar -axvf elasticsearch-7.5.1-linux-x86_64.tar.gz 
+
+# 如果解压后es放置的目录需要root用户才能执行，需要使用chomd命令将es目录的拥有者改为elk
+# 因为es不能以root身份启动
 ```
+
+
 进入解压后的目录下的config目录，修改elasticsearch.yml文件，下面是修改后的yml文件内容
 ```txt
 # ---------------------------------- Cluster -----------------------------------
