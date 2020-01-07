@@ -116,7 +116,8 @@ i18n.locale: "zh-CN"
 ```
 
 # 启动kibana
-执行kibana
+进入kibana目录下bin目录，执行./kibana。在浏览器访问 localhost:5601
+
 
 
 
