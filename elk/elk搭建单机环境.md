@@ -111,7 +111,7 @@ path.logs: /usr/local/app/logstash-7.5.1/logs-path
 解压缩包，进入config目录，编辑kibana.yml 文件，编辑后内容如下：
 ```txt
 server.host: 0.0.0.0
-elasticsearch.hosts: ["http://192.168.177.120:9200"]
+elasticsearch.hosts: ["http://hostname:9200"]
 i18n.locale: "zh-CN"
 ```
 
