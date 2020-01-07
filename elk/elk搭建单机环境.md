@@ -107,6 +107,9 @@ path.logs: /usr/local/app/logstash-7.5.1/logs-path
  bin/logstash -f config/logstash.conf
 ```
 
+# 安装logstash-7.5.1
+解压
+
 
 
 
