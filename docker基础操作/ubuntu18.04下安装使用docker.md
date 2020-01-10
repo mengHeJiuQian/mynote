@@ -17,7 +17,8 @@ docker run -p 33306:3306 -e MYSQL_ROOT_PASSWORD=1317598LY3201abc mysql
 
 # 进入MySQL容器,登陆MySQL
 docker exec -it 容器id(CONTAINER ID) /bin/bash
-# 如果本地使用的mysql的docker容器，
+# 如果本地使用的mysql是docker容器，使用mysql连接时必须要带上"-h 主机名或IP" ，否则会去连接本地安装的mysql。
+mysql -h aliyun -P 33306 -uroot -p
 
 # 登录之后修改root用户可以在任意机器上连接MySQL
 mysql> GRANT ALL ON *.* TO 'root'@'%';
