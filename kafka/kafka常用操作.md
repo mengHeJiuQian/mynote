@@ -10,3 +10,8 @@ $ ./zookeeper-server-start.sh -daemon ../config/zookeeper.properties
 # 关闭kafka
 $ bin/kafka-server-stop.sh 
 ```
+
+# kafka的操作topic
+```bash
+
+```
