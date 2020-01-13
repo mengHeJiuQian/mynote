@@ -13,7 +13,7 @@ $ bin/kafka-server-stop.sh
 
 # kafka的操作topic
 ```bash
-# 查看kafka的topic
+# 查看kafka所有的topic
 $ ./kafka-topics.sh --zookeeper localhost:2181 --list
 
 
