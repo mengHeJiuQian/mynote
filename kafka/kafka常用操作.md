@@ -16,6 +16,6 @@ $ bin/kafka-server-stop.sh
 # 查看kafka所有的topic
 $ ./kafka-topics.sh --zookeeper localhost:2181 --list
 
-# 
+# 查看topic内容
 $ ./kafka-console-consumer.sh --zookeeper localhost:2181 --topic nginx_log --from-beginning
 ```
