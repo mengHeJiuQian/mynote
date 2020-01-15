@@ -19,3 +19,9 @@ $ ./kafka-topics.sh --zookeeper localhost:2181 --list
 # 启动一个消费者，从头消费所有消息，可以用来查看topic所有的消息
 $ ./kafka-console-consumer.sh --bootstrap-server localhost:2181 --topic nginx_log --from-beginning
 ```
+
+## 删除相关操作
+```bash
+# 删除一个Topic
+$ kafka-topics.sh --zookeeper localhost:2181 --delete --topic TOPIC_NAME
+```
